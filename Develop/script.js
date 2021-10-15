@@ -8,6 +8,11 @@ function generatePassword() {
   var howManyChar = prompt("How many characters would you like?")
   if ((howManyChar > 128) || (howManyChar < 8)) {
     alert("Oops! Refresh the page and try again");
+    let num;
+
+do {
+  let tryAgain = prompt("How many characters would you like?", 0);
+} while (tryAgain < 128 && tryAgain> 8 && num);
     //return function    //loop the erroroneous people to the top of this variable
   }
   else {
@@ -77,6 +82,15 @@ function generatePassword() {
     returnValue += y1.charAt(Math.floor(Math.random() * y1.length));
   }
   return returnValue;
+}
+else if((Symbols == true) && (Num == false) && (upper==true) && (lower==false)){
+ let y1 = strS.concat(strU);
+ var returnValue = "";
+ var length = parseInt(howManyChar, 10);
+ for (var i = 0; i < (length); ++i) {
+   returnValue += y1.charAt(Math.floor(Math.random() * y1.length));
+ }
+ return returnValue;
 }
 else if((Symbols == false) && (Num == true) && (upper==true) && (lower==true)){
   let y1 = strN.concat(strU, strL);
