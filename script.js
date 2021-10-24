@@ -13,8 +13,7 @@ function generatePassword() {
   else {
 
     confirm("You would like " + howManyChar + " characters.")
-  }
-  //Password variables
+   //Password variables
   var Symbols = confirm("Would you like special characters?")
   let strS = "!#$%&'()*+,-./:;<=>?@[^_`{|}~/]"
   if (Symbols === false) {
@@ -153,7 +152,7 @@ else if((Symbols == false) && (Num == true) && (upper==true) && (lower==true)){
    }
     else ((Symbols == false) && (Num == false) && (upper==false) && (lower==false))
       alert("You must select symbols, numbers, upper case characters, or lower case characters to generate a passcode");
-        
+    }     
   }
   // var length = howManyChar.length;
   // var returnValue = "";
